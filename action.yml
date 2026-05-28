@@ -1,0 +1,39 @@
+name: 'Stale Issue Closer'
+description: 'Auto-close stale issues and pull requests after a period of inactivity'
+branding:
+  icon: 'clock'
+  color: 'gray-dark'
+
+inputs:
+  repo-token:
+    description: 'GitHub token for API authentication'
+    required: false
+    default: ${{ github.token }}
+  stale-days:
+    description: 'Days of inactivity before an issue/PR is marked stale'
+    required: false
+    default: '30'
+  close-days:
+    description: 'Days after stale label before closing'
+    required: false
+    default: '7'
+  stale-label:
+    description: 'Label to apply when marking as stale'
+    required: false
+    default: 'stale'
+  close-label:
+    description: 'Label to apply when closing'
+    required: false
+    default: 'stale-closed'
+  exempt-labels:
+    description: 'Comma-separated list of labels that exempt an issue/PR from being marked stale'
+    required: false
+    default: 'security,pinned'
+  dry-run:
+    description: 'If true, only log actions without actually making changes'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'node20'
+  main: 'index.js'

@@ -1,0 +1,29 @@
+{
+  "name": "stale-issue-closer-action",
+  "version": "1.0.0",
+  "description": "A GitHub Action to auto-close stale issues and pull requests after a period of inactivity",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js --dry-run"
+  },
+  "keywords": [
+    "github-actions",
+    "stale-bot",
+    "issue-management",
+    "automation",
+    "hacktoberfest"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCL339/stale-issue-closer-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SCL339/stale-issue-closer-action/issues"
+  },
+  "homepage": "https://github.com/SCL339/stale-issue-closer-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^6.0.0"
+  }
+}
